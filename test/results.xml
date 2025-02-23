@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1740286279" />
+    <testcase name="test_project" classname="test" file="/home/runner/work/tt10-lab2-MDJ/tt10-lab2-MDJ/test/test.py" lineno="9" time="0.0018918514251708984" sim_time_ns="100000.001" ratio_time="52858274.00054241" />
+  </testsuite>
+</testsuites>
