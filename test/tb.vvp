@@ -1,0 +1,59 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x124e04a70 .scope module, "tb" "tb" 2 7;
+ .timescale -9 -12;
+v0x600003f30630_0 .var "clk", 0 0;
+v0x600003f306c0_0 .var "ena", 0 0;
+v0x600003f30750_0 .var "rst_n", 0 0;
+v0x600003f307e0_0 .var "ui_in", 7 0;
+v0x600003f30870_0 .var "uio_in", 7 0;
+L_0x118040058 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x600003f30900_0 .net "uio_oe", 7 0, L_0x118040058;  1 drivers
+L_0x118040010 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x600003f30990_0 .net "uio_out", 7 0, L_0x118040010;  1 drivers
+v0x600003f30a20_0 .net "uo_out", 7 0, L_0x600003c38000;  1 drivers
+S_0x124e04be0 .scope module, "user_project" "tt_um_example" 2 31, 3 8 0, S_0x124e04a70;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 8 "ui_in";
+    .port_info 1 /OUTPUT 8 "uo_out";
+    .port_info 2 /INPUT 8 "uio_in";
+    .port_info 3 /OUTPUT 8 "uio_out";
+    .port_info 4 /OUTPUT 8 "uio_oe";
+    .port_info 5 /INPUT 1 "ena";
+    .port_info 6 /INPUT 1 "clk";
+    .port_info 7 /INPUT 1 "rst_n";
+L_0x1180400a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x600003f30000_0 .net/2u *"_ivl_6", 0 0, L_0x1180400a0;  1 drivers
+v0x600003f30090_0 .net *"_ivl_8", 3 0, L_0x600003c380a0;  1 drivers
+v0x600003f30120_0 .net "_unused", 0 0, L_0x600003c38140;  1 drivers
+v0x600003f301b0_0 .net "clk", 0 0, v0x600003f30630_0;  1 drivers
+v0x600003f30240_0 .net "ena", 0 0, v0x600003f306c0_0;  1 drivers
+v0x600003f302d0_0 .net "rst_n", 0 0, v0x600003f30750_0;  1 drivers
+v0x600003f30360_0 .net "ui_in", 7 0, v0x600003f307e0_0;  1 drivers
+v0x600003f303f0_0 .net "uio_in", 7 0, v0x600003f30870_0;  1 drivers
+v0x600003f30480_0 .net "uio_oe", 7 0, L_0x118040058;  alias, 1 drivers
+v0x600003f30510_0 .net "uio_out", 7 0, L_0x118040010;  alias, 1 drivers
+v0x600003f305a0_0 .net "uo_out", 7 0, L_0x600003c38000;  alias, 1 drivers
+L_0x600003c38000 .arith/sum 8, v0x600003f307e0_0, v0x600003f30870_0;
+L_0x600003c380a0 .concat [ 1 1 1 1], L_0x1180400a0, v0x600003f30750_0, v0x600003f30630_0, v0x600003f306c0_0;
+L_0x600003c38140 .reduce/and L_0x600003c380a0;
+    .scope S_0x124e04a70;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "tb.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x124e04a70 {0 0 0};
+    %delay 1000, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "test/tb.v";
+    "/Users/alexk/Documents/GitHub/tt10-lab2-MDJ/src/project.v";
