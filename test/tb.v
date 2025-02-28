@@ -27,7 +27,7 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-  priority_encoder_8to3 (
+  priority_encoder_8to3 user_project (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
