@@ -5,13 +5,14 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = prority_encoder.v
+PROJECT_SOURCES = project.v
 
 ifneq ($(GATES),yes)
 
 # RTL simulation:
 SIM_BUILD				= sim_build/rtl
-VERILOG_SOURCES += $(SRC_DIR)/priority_encoder.v
+#VERILOG_SOURCES += $(SRC_DIR)/priority_encoder.v
+VERILOG_SOURCES += $(addprefix $(SRC_DIR)/,$(PROJECT_SOURCES))
 else
 
 # Gate level simulation:
