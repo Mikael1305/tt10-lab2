@@ -6,7 +6,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module priority_encoder_8to3(
+module priority_encoder(
     input [7:0] A, 
     input [7:0] B, 
     output reg [3:0] address, 
