@@ -27,7 +27,7 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-  tt_priority_encoder (
+  tt_priority_encoder(
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
