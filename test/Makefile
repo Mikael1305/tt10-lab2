@@ -13,7 +13,6 @@ ifneq ($(GATES),yes)
 SIM_BUILD				= sim_build/rtl
 VERILOG_SOURCES += $(addprefix $(SRC_DIR)/,$(PROJECT_SOURCES))
 VERILOG_SOURCES += $(SRC_DIR)/priority_encoder.v
-
 else
 
 # Gate level simulation:
