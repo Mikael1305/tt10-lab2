@@ -34,8 +34,9 @@ async def test_project(dut):
 
     # The following assersion is just an example of how to check the output values.
     # Change it to match the actual expected output of your module:
-    assert dut.uo_out.value == 50 # for project.v
+    #assert dut.uo_out.value == 50 # for project.v
     #assert dut.uo_out.value == 12 # for priority_encoder.v
+    assert dut.uo_out.value == 1 # for parity_check.v
 
     # Keep testing the module by changing the input values, waiting for
     # one or more clock cycles, and asserting the expected output values.
